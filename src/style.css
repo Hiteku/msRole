@@ -1,0 +1,111 @@
+.flex-container {
+  background-color: #333;
+  margin: 3% 20%;
+  padding: 20px 20px 0px;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 1150px) {
+  .flex-container {
+    margin: 3%;
+  }
+}
+
+.flex-container h1 {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.role-directory-container {
+  padding: 20px;
+  border-radius: 0 8px 8px 8px;
+  margin-bottom: 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+.page-buttons {
+  display: flex;
+  height: 38px;
+}
+
+.page-buttons button {
+  padding: 10px;
+  margin-right: 5px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.page-buttons button.active {
+  background-color: #222;
+}
+
+.sort-by-container {
+  display: flex;
+  margin: auto -9.5px 4px auto;
+  height: 30px;
+}
+
+.sort-by-container select {
+  width: 75px;
+  margin-right: 10px;
+  color: #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #6C6C6C;
+  appearance: none;
+  background-color: #424242;
+}
+
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.role-table th,
+.role-table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.role-table th {
+  background-color: #000;
+}
+
+.role-table tbody tr:nth-child(even) {
+  background-color: #333;
+}
+
+.src {
+  text-decoration: none;
+  color: #ddd;
+}
+
+#src {
+  text-align: center;
+  color: #ddd;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.floating-button:hover {
+  background-color: #777;
+}
