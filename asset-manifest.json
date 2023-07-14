@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/msRole/static/css/main.807d40cf.css",
+    "main.js": "/msRole/static/js/main.59f4019b.js",
+    "index.html": "/msRole/index.html",
+    "main.807d40cf.css.map": "/msRole/static/css/main.807d40cf.css.map",
+    "main.59f4019b.js.map": "/msRole/static/js/main.59f4019b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.807d40cf.css",
+    "static/js/main.59f4019b.js"
+  ]
+}
