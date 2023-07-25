@@ -326,11 +326,8 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <div
-      style={buttonStyles}
-      onClick={scrollToTop}
-    >
-      <span>TOP</span>
+    <div style={buttonStyles} onClick={scrollToTop} >
+      <i className="fa-solid fa-angle-up"></i>
     </div>
   );
 };
