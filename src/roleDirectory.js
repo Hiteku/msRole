@@ -97,7 +97,7 @@ const RoleDirectory = ({
         <div className="sort-by-container">
           {currentPage === "萌獸終傷" && (
             <>
-              <p>有無創世</p>
+              <p>創世與否</p>
               <CheckBoxWrapper>
                 <CheckBox id="checkbox" type="checkbox"
                   checked={doubleFinishingEffect} onChange={handleSwitchToggle}/>
