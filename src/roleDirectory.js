@@ -221,7 +221,7 @@ const RoleList = ({
             <tr key={role.name}>
               <td>
                 {isImageVisible && (
-                  <><img src={('https://hiteku.github.io/img/ms/role/' + role.name + '.png')} alt="" /><br/></>
+                  <><img src={('https://hiteku.github.io/img/ms/role/' + role.name + '.png')} style={{width: "115px"}} alt="" /><br/></>
                 )}
                 {role.name}
               </td>
