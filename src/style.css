@@ -63,6 +63,13 @@
   background-color: #424242;
 }
 
+.sort-by-container p {
+  color: #ddd;
+  font-size: 13px;
+  display: flex;
+  margin: auto -43px 7px auto;
+}
+
 .role-table {
   width: 100%;
   border-collapse: collapse;
@@ -108,4 +115,27 @@
 
 .floating-button:hover {
   background-color: #777;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  content: "面板小於該值則：雙攻終＞雙終爛";
+  display: none;
+  position: absolute;
+  width: 220px;
+  bottom: 45px;
+  left: 15px;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: #9393FF;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.tooltip:hover::before {
+  display: block;
 }

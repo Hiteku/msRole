@@ -96,11 +96,14 @@ const RoleDirectory = ({
         </button>
         <div className="sort-by-container">
           {currentPage === "萌獸終傷" && (
+            <>
+              <p>有無創世</p>
               <CheckBoxWrapper>
-              <CheckBox id="checkbox" type="checkbox"
-                checked={doubleFinishingEffect} onChange={handleSwitchToggle}/>
-              <CheckBoxLabel htmlFor="checkbox"/>
-            </CheckBoxWrapper>
+                <CheckBox id="checkbox" type="checkbox"
+                  checked={doubleFinishingEffect} onChange={handleSwitchToggle}/>
+                <CheckBoxLabel htmlFor="checkbox"/>
+              </CheckBoxWrapper>
+            </>
           )}
           <select value={sortBy} onChange={handleChangeSortBy} disabled={currentPage === "傳授技能"}>
             <option value="group">職業群</option>
@@ -213,7 +216,7 @@ const RoleList = ({
             {showBattlefieldEffect && <th style={{width: "8%"}}>SSS</th>}
             {showDoubleFinishingEffect && !hideTd700 && <th></th>}
             {showDoubleFinishingEffect && <th style={{width: "12%"}}>雙終效益</th>}
-            {showDoubleFinishingEffect && <th style={{width: "12%"}}>臨界值%攻</th>}
+            {showDoubleFinishingEffect && <th style={{width: "12%"}} class="tooltip">臨界值%攻</th>}
           </tr>
         </thead>
         <tbody>
