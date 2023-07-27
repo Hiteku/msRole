@@ -422,7 +422,7 @@ export const roleData = [
     {
     name: "亞克",
     group: "雷普",
-    class: "劍士",
+    class: "海盜",
     skills: "無我 Lv.2\n戰鬥狀態持續，每五秒發動一次，可重疊5次。\n發動時總傷+1%，重疊一次總傷+2%。\n（疊滿+11%總傷）",
     sortType: 13,
     battlefieldEffect: ["STR+10", "STR+20", "STR+40", "STR+80", "STR+100"],
