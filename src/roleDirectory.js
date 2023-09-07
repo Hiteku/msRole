@@ -79,20 +79,17 @@ const RoleDirectory = ({
         <button
           className={currentPage === "傳授技能" ? "active" : ""}
           onClick={() => handlePageChange("傳授技能")}
-        >
-          傳授技能
+        >傳授技能
         </button>
         <button
           className={currentPage === "戰地拼圖" ? "active" : ""}
           onClick={() => handlePageChange("戰地拼圖")}
-        >
-          戰地拼圖
+        >戰地拼圖
         </button>
         <button
           className={currentPage === "萌獸終傷" ? "active" : ""}
           onClick={() => handlePageChange("萌獸終傷")}
-        >
-          萌獸終傷
+        >萌獸終傷
         </button>
         <div className="sort-by-container">
           {currentPage === "萌獸終傷" && (
@@ -263,15 +260,19 @@ const RoleList = ({
               {showDoubleFinishingEffect && (
                 <td>
                   {doubleFinishingEffect
-                    ? role.doubleFinishingEffect.split('(')[1].replace(')', '')
-                    : role.doubleFinishingEffect.split('(')[0]}%
+                    ? role.doubleFinishingEffect.split(', ')[0].split('(')[1].replace(')', '') +
+                    (role.name === '幻獸師' ? '%(' + (role.doubleFinishingEffect.split(', ')[1].split('(')[1].replace(')', '')) + '%)' : '%')
+                    : role.doubleFinishingEffect.split(', ')[0].split('(')[0] +
+                    (role.name === '幻獸師' ? '%(' + (role.doubleFinishingEffect.split(', ')[1].split('(')[0]) + '%)' : '%')}
                 </td>
               )}
               {showDoubleFinishingEffect && (
                 <td>
                   {doubleFinishingEffect
-                    ? role.attackThreshold.split('(')[1].replace(')', '')
-                    : role.attackThreshold.split('(')[0]}%
+                    ? role.attackThreshold.split(', ')[0].split('(')[1].replace(')', '') +
+                    (role.name === '幻獸師' ? '%(' + (role.attackThreshold.split(', ')[1].split('(')[1].replace(')', '')) + '%)' : '%')
+                    : role.attackThreshold.split(', ')[0].split('(')[0] +
+                    (role.name === '幻獸師' ? '%(' + (role.attackThreshold.split(', ')[1].split('(')[0]) + '%)' : '%')}
                 </td>
               )}
             </tr>
@@ -279,7 +280,7 @@ const RoleList = ({
         </tbody>
       </table>
       <div id="src" style={{ display: currentPage === "萌獸終傷" ? "block" : "none" }}>
-        <sub>資料來源：<a class="src" href="https://forum.gamer.com.tw/Co.php?bsn=07650&sn=6444987" target="_blank" rel="noreferrer">各職業終傷萌獸效益統整</a></sub>
+        <sub>更新於V255版本．資料來源：<a class="src" href="https://forum.gamer.com.tw/Co.php?bsn=07650&sn=6444987" target="_blank" rel="noreferrer">各職業終傷萌獸效益統整</a></sub>
       </div>
     </div>
   );
