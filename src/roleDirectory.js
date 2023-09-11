@@ -218,12 +218,12 @@ const RoleList = ({
         </thead>
         <tbody>
           {sortedRoleData.map((role) => (
-            <tr key={role.name}>
+            <tr key={role.job}>
               <td>
                 {isImageVisible && (
-                  <><img src={('https://hiteku.github.io/img/ms/role/' + role.name + '.png')} style={{width: "115px"}} alt="" /><br/></>
+                  <><img src={('https://hiteku.github.io/img/ms/role/' + role.job + '.png')} style={{width: "115px"}} alt="" /><br/></>
                 )}
-                {role.name}
+                {role.job}
               </td>
               {!hideTd500 && <td>{role.group}</td>}
               {!hideTd500 && <td>{role.class}</td>}
@@ -261,18 +261,18 @@ const RoleList = ({
                 <td>
                   {doubleFinishingEffect
                     ? role.doubleFinishingEffect.split(', ')[0].split('(')[1].replace(')', '') +
-                    (role.name === '幻獸師' ? '%(' + (role.doubleFinishingEffect.split(', ')[1].split('(')[1].replace(')', '')) + '%)' : '%')
+                    (role.job === '幻獸師' ? '%(' + (role.doubleFinishingEffect.split(', ')[1].split('(')[1].replace(')', '')) + '%)' : '%')
                     : role.doubleFinishingEffect.split(', ')[0].split('(')[0] +
-                    (role.name === '幻獸師' ? '%(' + (role.doubleFinishingEffect.split(', ')[1].split('(')[0]) + '%)' : '%')}
+                    (role.job === '幻獸師' ? '%(' + (role.doubleFinishingEffect.split(', ')[1].split('(')[0]) + '%)' : '%')}
                 </td>
               )}
               {showDoubleFinishingEffect && (
                 <td>
                   {doubleFinishingEffect
                     ? role.attackThreshold.split(', ')[0].split('(')[1].replace(')', '') +
-                    (role.name === '幻獸師' ? '%(' + (role.attackThreshold.split(', ')[1].split('(')[1].replace(')', '')) + '%)' : '%')
+                    (role.job === '幻獸師' ? '%(' + (role.attackThreshold.split(', ')[1].split('(')[1].replace(')', '')) + '%)' : '%')
                     : role.attackThreshold.split(', ')[0].split('(')[0] +
-                    (role.name === '幻獸師' ? '%(' + (role.attackThreshold.split(', ')[1].split('(')[0]) + '%)' : '%')}
+                    (role.job === '幻獸師' ? '%(' + (role.attackThreshold.split(', ')[1].split('(')[0]) + '%)' : '%')}
                 </td>
               )}
             </tr>
