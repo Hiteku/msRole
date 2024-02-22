@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/msRole/static/css/main.0bcb9c3b.css",
-    "main.js": "/msRole/static/js/main.9d105afe.js",
+    "main.css": "/msRole/static/css/main.04d5f8f4.css",
+    "main.js": "/msRole/static/js/main.7dd86894.js",
     "index.html": "/msRole/index.html",
-    "main.0bcb9c3b.css.map": "/msRole/static/css/main.0bcb9c3b.css.map",
-    "main.9d105afe.js.map": "/msRole/static/js/main.9d105afe.js.map"
+    "main.04d5f8f4.css.map": "/msRole/static/css/main.04d5f8f4.css.map",
+    "main.7dd86894.js.map": "/msRole/static/js/main.7dd86894.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bcb9c3b.css",
-    "static/js/main.9d105afe.js"
+    "static/css/main.04d5f8f4.css",
+    "static/js/main.7dd86894.js"
   ]
 }
