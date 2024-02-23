@@ -120,14 +120,14 @@ input[type="radio"] {
 
 .filter label {
   display: inline-block;
-  padding: 8px 16px;
-  font-size: 16px;
+  padding: 4px 11.8px;
+  font-size: 13px;
   border: 1px solid #999;
   border-radius: 4px;
   cursor: pointer;
   user-select: none;
   transition: background-color 0.3s ease;
-  margin: 0px 10px 10px -5px;
+  margin: -5px 10px 8px -5px;
 }
 
 .filter label:hover {

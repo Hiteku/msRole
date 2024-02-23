@@ -6,7 +6,7 @@ import "./style.css";
 const CheckBoxWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: -41px 0px 41px 0px;
+  margin: -39px 0px 39px 0px;
 `;
 
 const CheckBoxLabel = styled.label`
@@ -77,7 +77,7 @@ function RadioOptions({ options, selected, handleOptionChange }) {
 }
 
 const RoleDirectory = () => {
-  const [currentPage, setCurrentPage] = useState("傳授技能");
+  const [currentPage, setCurrentPage] = useState('傳授技能');
   const [sortBy, setSortBy] = useState("group");
   const [isImageVisible, setIsImageVisible] = useState(false);
 
@@ -98,33 +98,33 @@ const RoleDirectory = () => {
       <h1>楓之谷職業列表 <img src="https://hiteku.github.io/img/ms/icon/迷你殺人鯨.png" alt=""/></h1>
       <div className="page-buttons">
         <button
-          className={currentPage === "傳授技能" ? "active" : ""}
-          onClick={() => handlePageChange("傳授技能")}
+          className={currentPage === '傳授技能' ? "active" : ""}
+          onClick={() => handlePageChange('傳授技能')}
         >傳授技能
         </button>
         <button
-          className={currentPage === "戰地拼圖" ? "active" : ""}
-          onClick={() => handlePageChange("戰地拼圖")}
+          className={currentPage === '戰地拼圖' ? "active" : ""}
+          onClick={() => handlePageChange('戰地拼圖')}
         >戰地拼圖
         </button>
         <button
-          className={currentPage === "能力資訊" ? "active" : ""}
-          onClick={() => handlePageChange("能力資訊")}
+          className={currentPage === '能力資訊' ? "active" : ""}
+          onClick={() => handlePageChange('能力資訊')}
         >能力資訊
         </button>
         <div className="sort-by-container">
-          <select value={sortBy} onChange={handleChangeSortBy} disabled={currentPage === "傳授技能"}>
+          <select value={sortBy} onChange={handleChangeSortBy} disabled={currentPage === '傳授技能'}>
             <option value="group">職業群</option>
-            {currentPage !== "傳授技能" && <option value="class">類別</option>}
-            {currentPage === "戰地拼圖" && <option value="battlefieldEffect">戰地效果</option>}
-            {currentPage === "能力資訊" && <option value="attackSpeed">攻速</option>}
-            {currentPage === "能力資訊" && <option value="criticalChance">暴率</option>}
-            {currentPage === "能力資訊" && <option value="doubleFinishingEffect">雙終效益</option>}
+            {currentPage !== '傳授技能' && <option value="class">類別</option>}
+            {currentPage === '戰地拼圖' && <option value="battlefieldEffect">戰地效果</option>}
+            {currentPage === '能力資訊' && <option value="attackSpeed">攻速</option>}
+            {currentPage === '能力資訊' && <option value="criticalChance">暴率</option>}
+            {currentPage === '能力資訊' && <option value="doubleFinishingEffect">雙終效益</option>}
           </select>
         </div>
       </div>
       <div className="role-directory-container">
-        {currentPage === "傳授技能" && (
+        {currentPage === '傳授技能' && (
           <RoleList
             roles={roleData}
             currentPage={currentPage}
@@ -135,7 +135,7 @@ const RoleDirectory = () => {
             isImageVisible={isImageVisible}
           />
         )}
-        {currentPage === "戰地拼圖" && (
+        {currentPage === '戰地拼圖' && (
           <RoleList
             roles={roleData}
             currentPage={currentPage}
@@ -146,7 +146,7 @@ const RoleDirectory = () => {
             isImageVisible={isImageVisible}
           />
         )}
-        {currentPage === "能力資訊" && (
+        {currentPage === '能力資訊' && (
           <RoleList
             roles={roleData}
             currentPage={currentPage}
@@ -241,9 +241,9 @@ const RoleList = ({
       <table className="role-table">
         <thead>
           <tr>
-            <th style={{width: "17%"}}>名稱</th>
-            {!hideTd500 && <th style={{width: "12%"}}>職業群</th>}
-            {!hideTd500 && <th style={{width: "12%"}}>類別</th>}
+            <th rowSpan="2" style={{width: "17%"}}>名稱</th>
+            {!hideTd500 && <th rowSpan="2" style={{width: "12%"}}>職業群</th>}
+            {!hideTd500 && <th rowSpan="2" style={{width: "12%"}}>類別</th>}
             {showSkills && <th>傳授技能</th>}
             {showBattlefieldEffect && <th>效果</th>}
             {showBattlefieldEffect && !hideTd700 && <th style={{width: "8%"}}>B</th>}
@@ -251,15 +251,38 @@ const RoleList = ({
             {showBattlefieldEffect && !isImageVisible && <th style={{width: "8%"}}>S</th>}
             {showBattlefieldEffect && <th style={{width: "8%"}}>SS</th>}
             {showBattlefieldEffect && !isImageVisible && <th style={{width: "8%"}}>SSS</th>}
-            {showDoubleFinishingEffect && attribute === 'attackSpeed' && <th>武器係數</th>}
-            {showDoubleFinishingEffect && attribute === 'attackSpeed' && <th>攻速</th>}
-            {showDoubleFinishingEffect && attribute === 'bossDamage' && <th>Ｂ傷</th>}
-            {showDoubleFinishingEffect && attribute === 'bossDamage' && <th>無視</th>}
-            {showDoubleFinishingEffect && attribute === 'criticalChance' && <th>暴率％</th>}
-            {showDoubleFinishingEffect && attribute === 'criticalChance' && <th>暴傷％</th>}
-            {showDoubleFinishingEffect && attribute === 'doubleFinishingEffect' && <th>雙終效益{genesis ? <><br />（創世）</> : ''}</th>}
-            {showDoubleFinishingEffect && attribute === 'doubleFinishingEffect' && <th className="tooltip">臨界值%攻{genesis ? <><br />（創世）</> : ''}</th>}
+            {showDoubleFinishingEffect && (
+              <>
+                {attribute === 'attackSpeed' && (
+                  <>
+                    <th>武器係數</th>
+                    <th>攻速</th>
+                  </>
+                )}
+                {attribute === 'bossDamage' && (
+                  <>
+                    <th>Ｂ傷</th>
+                    <th>無視</th>
+                  </>
+                )}
+                {attribute === 'criticalChance' && (
+                  <>
+                    <th>暴率%</th>
+                    <th>暴傷%</th>
+                  </>
+                )}
+                {attribute === 'doubleFinishingEffect' && (
+                  <>
+                    <th>雙終效益</th>
+                    <th className="tooltip">臨界%攻</th>
+                  </>
+                )}
+              </>
+            )}
           </tr>
+          {showDoubleFinishingEffect && attribute === 'doubleFinishingEffect' && genesis && (
+            <tr><th colSpan="2">{isImageVisible ? <></> : <>創世：</>}破壞的雅達巴特</th></tr>
+          )}
         </thead>
         <tbody>
           {sortedRoleData.map((role) => (
