@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './roleDirectory';
+import App from './App';
 import Sidebar from './sidebar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
