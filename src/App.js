@@ -242,21 +242,21 @@ const RoleList = ({
         <thead>
           <tr>
             <th rowSpan="2" style={{width: "17%"}}>名稱</th>
-            {!hideTd500 && <th rowSpan="2" style={{width: "12%"}}>職業群</th>}
-            {!hideTd500 && <th rowSpan="2" style={{width: "12%"}}>類別</th>}
+            {!hideTd500 && <th rowSpan="2" style={{width: "13%"}}>職業群</th>}
+            {!hideTd500 && <th rowSpan="2" style={{width: "13%"}}>類別</th>}
             {showSkills && <th>傳授技能</th>}
             {showBattlefieldEffect && <th>效果</th>}
-            {showBattlefieldEffect && !hideTd700 && <th style={{width: "8%"}}>B</th>}
-            {showBattlefieldEffect && !hideTd700 && <th style={{width: "8%"}}>A</th>}
-            {showBattlefieldEffect && !isImageVisible && <th style={{width: "8%"}}>S</th>}
-            {showBattlefieldEffect && <th style={{width: "8%"}}>SS</th>}
-            {showBattlefieldEffect && !isImageVisible && <th style={{width: "8%"}}>SSS</th>}
+            {showBattlefieldEffect && !hideTd700 && <th style={{width: "7.5%"}}>B</th>}
+            {showBattlefieldEffect && !hideTd700 && <th style={{width: "7.5%"}}>A</th>}
+            {showBattlefieldEffect && !(hideTd700 && isImageVisible) && <th style={{width: "7.5%"}}>S</th>}
+            {showBattlefieldEffect && <th style={{width: "7.5%"}}>SS</th>}
+            {showBattlefieldEffect && !(hideTd700 && isImageVisible) && <th style={{width: "7.5%"}}>SSS</th>}
             {showDoubleFinishingEffect && (
               <>
                 {attribute === 'attackSpeed' && (
                   <>
                     <th>武器係數</th>
-                    <th>攻速</th>
+                    <th>常駐攻速</th>
                   </>
                 )}
                 {attribute === 'bossDamage' && (
@@ -316,7 +316,7 @@ const RoleList = ({
                 <>
                   <td>{role.battlefieldEffect[0].split('+')[0]}</td>
                   {role.battlefieldEffect.map((effect, index) => (
-                    (hideTd700 && index < 2) || (isImageVisible && index !== 3) || (
+                    (hideTd700 && index < 2) || ((hideTd700 && isImageVisible) && index !== 3) || (
                       <td key={index}>{effect.split('+')[1]}</td>
                     )
                   ))}
