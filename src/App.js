@@ -354,14 +354,14 @@ const RoleList = ({
         <sub>
           <a href="https://forum.gamer.com.tw/Co.php?bsn=7650&sn=6446584" target="_blank" rel="noopener noreferrer">
             <img
-              src={`https://hiteku.github.io/img/-/bahamut.png`}
+              src={`https://hiteku.vercel.app/static/assets/icon/bahamut.png`}
               alt="imgBahamut"
             />
           </a>
           {/* </a>&nbsp;
           <a href="https://www.youtube.com/Hiteku" target="_blank" rel="noopener noreferrer">
             <img
-              src={`https://hiteku.github.io/img/-/youtube.png`}
+              src={`https://hiteku.vercel.app/static/assets/icon/youtube.png`}
               alt="imgYoutube"
             /> */} © Hiteku&nbsp;
           {currentPage === '能力資訊' && (

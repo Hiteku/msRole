@@ -798,7 +798,7 @@ export const roleData = [
     criticalChance: '50/100*',
     criticalDamage: '',
   },
-  {
+  { // https://maplestory.nexon.co.jp/job/akatsuki/kanna/
     job: '陰陽師',
     name: 'Kanna(神那)',
     group: '曉之陣',
